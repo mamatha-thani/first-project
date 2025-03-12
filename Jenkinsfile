@@ -21,7 +21,7 @@ pipeline {
         script {
             echo "Copying updated application files to EC2..."
             sh '''
-            scp -o StrictHostKeyChecking=no -i /var/lib/jenkins/jenkkins.pem -r app/main.py app/templates ubuntu@43.205.192.24:/home/ubuntu/USER-DETAILS/app/
+            scp -o StrictHostKeyChecking=no -i /var/lib/jenkins/jenkkins.pem -r app/main.py app/templates ubuntu@3.109.185.49:/home/ubuntu/USER-DETAILS/app/
             '''
             
             echo "Restarting application on EC2..."
